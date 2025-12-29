@@ -7,9 +7,18 @@ btn.addEventListener('click', ()=> {
     }
     else {
         let newHeading = document.getElementById('heading');
-
-    console.log(newHeading);    
-        newHeading.innerHTML = "Hello, "+  input.value;
+    //    console.log(input.value);    
+        //newHeading.innerHTML = "Hello, "+  input.value;
+        if (newHeading.textContent.includes(',')==false) {
+            newHeading.append(", "+ input.value);
+           // console.log(newHeading);
+        }
+        else {
+            const initialString = newHeading.textContent.split(',')[0];
+            newHeading.innerHTML = initialString +", "+  input.value;
+            console.log(newHeading.textContent);  
+             console.log(input.value);    
+        }
         input.value = ""; // after updaing text, reset that textbox
     }
     
