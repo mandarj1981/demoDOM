@@ -7,8 +7,9 @@ btn.addEventListener('click', ()=> {
     }
     else {
         let newHeading = document.getElementById('heading');
-   // console.log(newHeading);    
-        newHeading.innerHTML = newHeading.textContent + ", "+  input.value;
+
+    console.log(newHeading);    
+        newHeading.innerHTML = "Hello, "+  input.value;
         input.value = ""; // after updaing text, reset that textbox
     }
     
